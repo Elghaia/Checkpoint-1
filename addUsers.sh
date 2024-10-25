@@ -13,9 +13,9 @@ fi
 #Fonction pour vérifier que l'utilisateur n'existe pas déjà
 check_user ()
 {
-if cat /etc/passwd | grep $username
+if cat /etc/passwd | grep $1
 then
-        echo "L'utilisateur $username existe déjà"
+        echo "L'utilisateur $1 existe déjà"
 fi
 }
 
@@ -31,12 +31,12 @@ create_user ()
 #Vérification de la création de l'utilisateur
 verif()
 {
-        if cat /etc/passwd | grep $username
+        if cat /etc/passwd | grep $1
 then
-          echo "L'utilisateur $username a été crée"   # le compte a été crée
+          echo "L'utilisateur $1 a été crée"   # le compte a été crée
         exit 0
 else
-        echo "Erreur à la création de l'utilisateur $username"  # le compte n'a pas été crée
+        echo "Erreur à la création de l'utilisateur $1"  # le compte n'a pas été crée
         exit 1
 fi
 }
