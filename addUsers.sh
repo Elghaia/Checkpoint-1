@@ -3,7 +3,8 @@
 #Verification de la présence d'arguments
 check_argument()
 {
-if [ -z "$1" ]; then
+if [ -z "$1" ] 
+then
     echo "Il manque les noms d'utilisateurs en argument - Fin du script"
     exit 1
 fi
@@ -13,6 +14,7 @@ fi
 check_user ()
 {
 if cat /etc/passwd | grep $username
+then
         echo "L'utilisateur $username existe déjà"
 fi
 }
@@ -31,11 +33,10 @@ verif()
 {
         if cat /etc/passwd | grep $username
 then
-  # le compte a été crée
-        echo "L'utilisateur $username a été crée" 
+          echo "L'utilisateur $username a été crée"   # le compte a été crée
         exit 0
 else
-        echo "Erreur à la création de l'utilisateur $username"
+        echo "Erreur à la création de l'utilisateur $username"  # le compte n'a pas été crée
         exit 1
 fi
 }
@@ -44,10 +45,11 @@ fi
 
 
 # Boucle pour traiter chaque argument
-for username in "$@"; #permet de déclarer la variable $username
+for username in "$@" #permet de déclarer la variable $username
 do
-    if check_argument "$username";
+    if check_argument "$username"
         then
+        check_user "$username"
     else
         create_user "$username"
         verif "$username"
