@@ -41,15 +41,15 @@ else
 fi
 }
 
-
-
+# Vérification des arguments
+check_argument "$@"
 
 # Boucle pour traiter chaque argument
-for username in "$@" #permet de déclarer la variable $username
+for username in "$@"     #permet de déclarer la variable $username
 do
-    if check_argument "$username"
-        then
-        check_user "$username"
+    if ! check_user "$username"
+    then
+        continue
     else
         create_user "$username"
         verif "$username"
