@@ -8,6 +8,9 @@
 ## La gestion du swap
 ![swap](https://github.com/user-attachments/assets/b258db52-d98e-4ba8-b3e3-e3541b2a2b6e)
 
+# Correction du swap
+![swap](https://github.com/user-attachments/assets/909b1601-4d0b-417a-a0d6-d117905b4568)
+
 ## Le nom des partitions
 
 ![nomdespartitions](https://github.com/user-attachments/assets/5ae16397-6258-43f6-8e54-0bd7ef174e00)
@@ -26,3 +29,6 @@
 
 ## Résumé
 ![Resumé](https://github.com/user-attachments/assets/8ea416d1-8055-415b-9f11-52f0879169a2)
+
+
+
